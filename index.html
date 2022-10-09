@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuma Bercanda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        body {
+            background: linear-gradient(to right, #fff 50%, rgb(38, 28, 177) 50%);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 70px 30px 80px 30px;
+            height: 500px;
+            border-radius: 3px;
+            box-shadow: 1px 1px 20px -5px;
+        }
 
+        .kiri {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .kiri img {
+            width: 50px;
+            rotate: -90deg;
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+            top: 32%;
+        }
+
+        .kiri h2, .kiri p {
+            cursor: default;
+        }
+
+        .kiri h2 {
+            font-size: 25px;
+            color: rgb(38, 28, 177);
+        }
+
+        .kiri p {
+            font-size: 13px;
+        }
+
+        form {
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(38, 28, 177);
+        }
+
+        .section-1, .section-2 {
+            color: #fff;
+        }
+
+        .section-1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-1 input {
+            height: 35px;
+            padding-left: 10px;
+            width: 300px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+        }
+
+        .section-1 input, label {
+            margin-bottom: 10px;
+        }
+
+        /* Awal section-2 */
+        .section-2 {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: default;
+        }
+
+        .section-2 input {
+            margin-right: 5px;
+        }
+
+        .section-2 p:nth-child(3) {
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 13px;
+            color: #fff;
+        }
+        /* Akhir section-2 */
+
+        button {
+            padding: 8px;
+            color: #fff;
+            font-weight: bold;
+            background-color: black;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Awl Bagian Kiri -->
+        <div class="kiri">
+            <img src="logo1.png" alt="Logo Universitas Mulia">
+            <h2>PORTAL SIAS</h2>
+            <P>Universitas Mulia Balikpapan</P>
+        </div>
+        <!-- Akhir bagian kiri -->
+
+        <!-- Awal bagian kanan -->
+        <form action="">
+            <section class="section-1">
+                <label for="email">Email Anda</label>
+                <input type="text" id="email" placeholder="Masukkan Email Anda" required>
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" placeholder="Masukkan Kata Sandi Anda" required>
+            </section>
+            <section class="section-2">
+                <input type="checkbox" name="" id="ingat">
+                <p for="ingat">Ingat Saya</p>
+                <p>Lupa Kata Sandi</p>
+            </section>
+            <button>MASUK</button>
+        </form>
+        <!-- Akkhir bagian kanan -->
+    </div>
+</body>
+</html>
